@@ -11,4 +11,6 @@ git add
 git commit -m "asdsda"
 # 将工作区的文件推向远端仓库
 git push
+# 将远端仓库同步到本地
+git pull
 ```
