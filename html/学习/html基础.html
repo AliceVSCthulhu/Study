@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML基础</title>
+</head>
+
+<body>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element -->
+    <h1>
+        <!-- h1标题栏 -->
+        New Heading
+    </h1>
+    <h2>heading 2</h2>
+    <h3>heading 3</h3>
+    <h4>heading 4</h4>
+    <h5>heading 5</h5>
+    <h6>heading 6</h6>
+
+    <!-- p文本段落栏 Lorem自动生成占位文字 LoremX 生成X个占位文字 -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat amet laboriosam quas et tempore doloribus optio a
+        consectetur vel? Quo doloremque voluptates quasi amet vel et, voluptas quisquam reprehenderit explicabo.</p>
+
+    <p>梁捞捞是捞的一。</p>
+    <!-- 块级元素  内联元素
+    块级元素在页面以块的形式展现，出现在新的一行，占全部宽度 如<div><h1>-<h6><p>
+    内联元素通常在块级元素内，不会导致文本换行，只占必要的部分宽度 如<a><img><em><strong>-->
+    <p><em>梁捞捞</em>是<strong>猪</strong></p>
+    <p>梁捞捞是<i>狗</i></p>
+    <p>梁唠唠是狗</p>
+    <p>天下第一狗</p>
+    <p>舍你其谁</p>
+
+    <!-- a超链接 不会另起换行-->
+    <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes  -->
+    <!--https://developer.mozilla.org/en-US/docs/Web/HTML/ Global_attributes -->
+    <a href="https://www.7k7k.com">小游戏网站</a> <!--这个是点超链接会离开当前网页-->
+    <a href="https://www.baidu.com" target="_blank">请自行百度</a>
+
+    <!-- lists列表 -->
+    <!-- ul是无序列表，表头为点号 -->
+    <ul>
+        <li>这是1</li>
+        <li>这是2</li>
+        <li>这是3</li>
+    </ul>
+
+    <!-- ol是有序列表 表头为含序列的数字 -->
+    <ol>
+        <li>这是1</li>
+        <li>这是2</li>
+        <li>这是3</li>
+    </ol>
+
+    <!-- table表格 td(table data) tr(table row)行 th(table header cell)列-->
+    <!-- table属性 border、background-color、background、width、height、bordercolor、cellspacing、
+     cellpadding、align -->
+    <!-- tr属性   height、align（水平对齐方式）、valign（垂直对齐方式（middle|top|bottom）、
+             background-color、background） 
+             td属性 等行同高 等列同宽  width、height、align、valign、background-color、
+             background colspan水平合并、rowspan垂直合并-->
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>居住地</th>
+                <th>胸围</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>梁捞捞</td>
+                <td>28</td>
+                <td>陕西西安</td>
+                <td>32cm</td>
+            </tr>
+            <tr>
+                <td>张帅帅</td>
+                <td>27</td>
+                <td>陕西西安</td>
+                <td>88cm</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- <br>line breaker尽量少用 -->
+    <br>
+    <!-- <hr>划水平线 -->
+    <hr>
+
+    <!-- 属性 title 鼠标悬停给予提示 -->
+
+    <!-- Form 表单 form name="表单的名称" action="提交的地址" method="提交的方式get|post"-->
+    <!-- get和post的区别：
+         get提交数据不安全，会在地址栏中显示，post安全
+         get只能提交少量的数据，post理论上没有限制 -->
+    <form action="form.js" method="post">
+        <div>
+            <label>姓名</label>
+            <input type="text" name="姓名" placeholder="请输入姓名" value="王八蛋">
+        </div>
+        <div>
+            <label>年龄</label>
+            <input type="text" name="年龄" placeholder="请输入年龄">
+        </div>
+        <div>
+            <label>邮箱</label>
+            <input type="email" name="电子邮箱" placeholder="请输入邮箱地址">
+            <!-- input内type属性：text 文本 password 密码 radio单选框（name属性相同） checkbox多选框  submit提交框 
+                reset重置框（submit和reset会刷新网页） button一个不刷新网页的按钮-->
+            <button>提交</button>
+            <button type="reset">重置</button>
+            <!-- button同submit 默认type=submit-->
+            <!-- disabled 禁用  readonly 只读 -->
+        </div>
+        <!-- 下拉列表 select 内含option op之间写内容 size显示的数量 配合select使用 -->
+        <div>
+            <select name="city" id="city">
+                <option value="bj">北京</option>
+                <option value="xx">xx</option>
+                <option value="xx">xx</option>
+            </select>
+            <!-- 留言 textarea默认可拖拽大小 cols列数 rows行数-->
+            留言：
+            <textarea name="liuyan" id="" liuyan cols="30" rows="10"></textarea>
+            <!-- lable提升用户体验度 （点击汉字可选中）for属性跟input id属性一致可绑定 -->
+            <input type="radio" name="sex" id="male">
+            <label for="male">男</label>
+            <input type="radio" name="sex" id="famale">
+            <label for="famale">女</label>
+            <br>
+            <input type="checkbox" id="eat">
+            <label for="eat">吃</label>
+            <input type="checkbox" id="drink">
+            <label for="drink">喝</label>
+            <input type="checkbox" id="play">
+            <label for="play">玩</label>
+            <input type="checkbox" id="fuck">
+            <label for="fuck">乐</label>
+
+        </div>
+        <div>
+            <!-- 提交文件input type=file form属性里面增加enctype属性 文件一般用multipart/form-data二进制数据-->
+            <form action="" name="" enctype="multipart/form-data">
+                文件：<input type="file">
+                <!-- 隐藏域 type=hidden-->
+                隐藏域：<input type="hidden">
+                <!-- 图片提交 -->
+                图片提交按钮：<input type="image" src="#">
+            </form>
+            <!-- input新增type属性值
+             1、Email 只能输入邮箱
+             2、URL 只能输入网址（https）
+             3、search 搜索框 后面含×
+             4、number 之恩输入数字 含上下调节按钮 可规定min和max、step、value
+             5、range 范围（滑块） 可规定min和max、step、value
+             6、color 颜色 可规定value
+             7、tel 输入电话 pc端没什么用 主要用于移动端
+             8、date 输入年月日
+             9、week 输入年周
+             10、month 输入年月
+             11、autofocus 页面加载后该元素自动获得焦点
+             12、multiple 可以在输入中输入多个值，用英文的逗号隔开，一般配合邮箱与网址使用
+             13、placeholder 告诉用户可以在字段中输入什么提示
+             14、required 必须填写该元素 
+             15、minlength maxlength 设置最小字符与最大字符数 -->
+        </div>
+    </form>
+    <div>
+        <video src="https://www.bilibili.com/video/BV1nx4y1t7fr?t=9.6" muted controls width="500" loop poster="#">
+            你的浏览器不支持播放视频</video>
+        <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1855429594&bvid=BV1gs42137XX&cid=1571829312&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+        
+        <!-- poster属性是视频播放前展示的图片 video是行内元素
+             支持的格式.mp4 .ogg(移动端) .webM(高清)
+             src：路径 loop：循环播放，默认播放一次 autoplay：自动播放（谷歌禁止自动播放） muted：静音 controls：显示控制面板
+             width height：宽高 poster：设置播放前显示一张图片-->
+    </div>
+    <!-- audio 音频双标签 行内元素
+     属性：autoplay、controls、loop、muted、preload（音频在页面加载时进行加载并预备播放，如果使用autoplay则忽略该属性）、src（url）
+     source 单标签 给浏览器提供多种视频或者音频的格式选择
+            从上往下走 支持哪个选择哪个
+            video/audio source scr="" -->
+    <br>
+    <br>
+    <hr>
+    <form action="tencentcount" method="post">
+        <div>
+            <label>QQ账号</label>
+            <input type="text" name="QQ账号" placeholder="请输入QQ号">
+        </div>
+        <div>
+            <label>QQ密码</label>
+            <input type="password" name="密码" placeholder="请输入密码">
+        </div>
+        <input type="submit" name="提交" value="提交">
+        <input type="reset" name="取消" value="取消">
+    </form>
+
+    <!-- dl包含术语定义以及描述的列表，通常用于展示词汇表或者元数据 -->
+    <dl>
+        <div>
+            <dt>Name</dt>
+            <dd>Godzilla</dd>
+        </div>
+        <div>
+            <dt>Born</dt>
+            <dd>1952</dd>
+        </div>
+        <div>
+            <dt>Birthplace</dt>
+            <dd>Japan</dd>
+        </div>
+        <div>
+            <dt>Color</dt>
+            <dd>Green</dd>
+        </div>
+    </dl>
+    <dl>
+        <dt>Name</dt>
+        <dd>Godzilla</dd>
+        <dt>Born</dt>
+        <dd>1952</dd>
+        <dt>Birthplace</dt>
+        <dd>Japan</dd>
+        <dt>Color</dt>
+        <dd>Green</dd>
+    </dl>
+
+    <p>Cryptids of Cornwall:</p>
+    <dl>
+        <dt>Beast of Bodmin</dt>
+        <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+        <dt>Morgawr</dt>
+        <dd>A sea serpent.</dd>
+
+        <dt>Owlman</dt>
+        <dd>A giant owl-like creature.</dd>
+    </dl>
+
+    <!-- figure 可附标题内容元素 都首行缩进了2字符-->
+    <figure>
+        <img src="https://img2.baidu.com/it/u=137160213,2745044578&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1200"
+            alt="Elephant at sunset" width="300" />
+        <figcaption>An elephant at sunset</figcaption>
+    </figure>
+
+    <!-- details 下拉细节 -->
+    <details>
+        <summary>装机清单</summary>
+        <p>显示器</p>
+        <p>机箱</p>
+        <p>主板</p>
+        <p>显卡</p>
+        <p>CPU</p>
+        <p>内存条</p>
+        <p>硬盘</p>
+        <p>电源</p>
+    </details>
+    <!-- mark 用于高亮文本-->
+    <mark>高亮文本
+        <!-- meter 刻度 type:min\max\value\low(低预警值)\high(高预警值) -->
+        <!-- progress进度条 type:min\max\value-->
+        <!-- canvas 画布 type:height width moz-opaque半透明-->
+
+
+        <!-- button -->
+        <button>你是不是脑子有问题</button>
+        <br>
+
+        <!-- img -->
+        <img style="width: 50vw;" src="img/11.jpg" alt="百炼英雄战力图">
+        <!-- src为图片源 alt为图片显示不出来时候显示的文字 -->
+
+        <!-- H5新增的语义化布局标签 -->
+        <nav>导航</nav>
+        <header>头部</header>
+        <footer>页脚</footer>
+        <aside>侧边栏</aside>
+        <article>文章、帖子、博客</article>
+        <section>章节</section>
+
+        <!-- quotation -->
+        <!-- blockquote引用话语 内可包含任何块级元素-->
+        <blockquote>梁捞捞</blockquote>
+
+        <!-- abbr定义缩写词或首字母缩略词 -->
+        <p><abbr title="梁珂">LK</abbr> is <abbr title="傻蛋蛋">SDD</abbr></p>
+
+        <!-- cite定义作品得到标题等，通常与引用文本一起使用，指明引用的来源 -->
+        <p><cite>梁捞捞是天下第一猪</cite> by 张帅帅</p>
+        <div style="margin-top: 500px;"></div>
+
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML -->
+</body>
+
+</html>

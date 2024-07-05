@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>CSS初尝试</title>
+    <!-- <style>
+        h1{
+          color:blue
+        }
+      </style> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">
+            <h1 style="color: brown;" （不推荐）>CSS初尝试</h1>
+            <p>外部样式表
+                <br>
+                CSS保存在.css文件中
+                <br>
+                在HTML里使用"link"引用（推荐）
+                <br>
+                <hr>
+                内部样式表
+                <br>
+                不使用外部CSS文件
+                <br>
+                将CSS放在HTMLstyle里（推荐）
+                <br>
+                <hr>
+                内联样式
+                <br>
+                仅影响一个元素
+                <br>
+                在HTML元素的style属性中添加（不推荐）
+            <h1>开始使用</h1>
+            <p id="para2">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ut rerum, consequuntur voluptas
+                consequatur
+                nisi quaerat nulla ea a obcaecati esse neque ipsum aliquam perferendis atque dolorem! Magnam, totam
+                eligendi.
+            </p>
+            <!-- https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors -->
+            <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/color_value -->
+            <!-- https://serennu.com/colour/hsltorgb.php 颜色转化-->
+            <!-- https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals -->
+            <!-- https://www.cssfontstack.com 字体占有率大全 -->
+            <!-- https://fonts.google.com 网络字体需vpn -->
+
+        </div>
+        <div class="box2">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam doloribus obcaecati nisi beatae quia
+                facere iste odit quasi in consequatur error ullam reprehenderit saepe similique, harum aliquam ratione
+                vel rerum.
+            </p>
+            <button>按钮</button>
+        </div>
+        <div class="list">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+            <a href="aaa" target="_blank">小游戏网站</a>
+        </div>
+        <div class="block">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, enim.</p>
+        </div>
+        <div class="block">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, enim.</p>
+        </div>
+        <div class="block">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, enim.</p>
+        </div>
+        <div class="clearfix"></div>
+        <div id="block2">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, enim.</p>
+        </div>
+        <div id="block3">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, enim.</p>
+        </div>
+        <div class="clearfix"></div>
+        <div class="list2">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+        <div class="position">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, enim.</p>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+    </div>
+    <div class="float">
+        <div id="b1"></div>
+        <div id="b2"></div>
+        <div id="b3"></div>
+        <div class="text"></div>
+    </div>
+
+    <!-- 清除浮动
+    1.父元素设置高度
+    2.受影响的元素增加clear:both属性
+    3.父元素使用overflow：hidden、clear:both清除浮动
+    4.伪对象方式 给父标签添加伪类::after，设置空的内容，并且使用clear:both，这种父不可设置高度-->
+
+    <!-- position给元素进行定位，
+        relative相对定位，不会脱离文档流
+        absolute绝对定位，会脱离文档流
+        fixed固定定位，会脱离文档流
+        设置定位后可使用left、top、right、bottom进行调整位置
+        设置定位后，相对定位和绝对定位是相对于具有定位的父级元素进行位置调整，如果父级元素不存在定
+        位，则继续向上逐级寻找，直到顶层文档。
+     -->
+
+    <!-- 字体属性
+         字体颜色：color
+         字体大小：font-size
+         字体粗细：font-weight
+         字体样式：font-style（normal默认值|italic倾斜）
+         指定元素字体：font-family
+    
+        颜色的取值
+         关键词：red、blue、green
+         十六进制：包含0-9 A-F #000000黑色 简写#000
+                              #ffffff白色 简写#fff
+         rgb()：取值0-255 rgb(0,0,0)黑色 rgb(255,255,255)白色
+         rgba()：a：透明度，取值0-1 0：完全透明 1：不透明
+    
+        字体大小
+         font-size 浏览器默认字体大小为16px，浏览器支持的最小字体为12px
+
+        字体加粗
+         font-weight 取值：normal默认值，不加粗 bold 加粗
+                          100-900 400=normal 700=bold
+
+        字体
+         font-family：字体1,字体2,..;
+         浏览器从左往右支持，如果支持字体1，则显示字体1，如果不支持字体1，则往后显示，显示字体2
+         如果字体有空格，必须加引号，例如:"Microsoft YaHei"
+    -->
+
+    <!-- 文本属性
+        元素内容的水平对齐方式
+         text-align：left|center|right
+
+        本文装饰
+         text-decoration：underline(下划线)|overline(上划线)|line-through(删除线)|none
+
+        英文字母大小写转换
+         text-transform：uppercase(全大写)|lowercase(全小写)|capitalize(每个单词首字母大写)
+
+        首行缩进
+         text-indent：
+         单位：px像素 绝对单位  em相对单位，相对于当前字体大小，默认值1em=16px(浏览器默认字体大小)
+    -->
+
+    <!-- 背景属性
+        背景颜色
+         background-color：transparent（透明默认值）取值见颜色的取值
+        
+        背景图片
+         background-image：url("")默认水平垂直平铺
+
+        背景图片是否平铺
+         background-repeat：repeat(默认值平铺)|no-repeat不平铺|repeat-x水平方向平铺|repeat-y垂直方向平铺
+    
+        背景图片的大小
+         background-size：px(当取一个值时等比例缩放，两个值时用空格隔开)|%(同px)|cover(背景优先图片可能覆盖不完全)|contain(图片优先背景可能覆盖不完全)
+
+        背景图片定位
+         background-position：0(水平方向) 0(垂直方向)默认值
+         取值：px(可取正负值，正值右下，负值左上，只取一个值时第二个值默认居中)|%|(left、right、bottom、center)
+
+        背景图片是否固定
+         background-attachment：scroll(默认值跟着页面动)|fixed(固定)
+
+        简写
+         background：颜色、图片、平铺、大小、定位、固定；
+         一个属性多个属性值，空格隔开，不区分前后顺序，简写属性没有取的值为默认值
+
+    -->
+
+    <!-- 列表属性
+        设置列表项标记的类型
+         list-style-type:none(无标记)|disc(默认实心圆)|circle(空心圆)|square(实心方块)|decimal(数字)|decimal-leading-zero(0开头的数字01、02)|lower-roman(小写罗马数字)|upper-roman(大写罗马数字)|lower-alpha(小写英文字母)|upper-alpha(大写英文字母)|lower-greek(小写希腊字母)
+         |lower-latin(小写拉丁字母)|upper-latin(大写拉丁字母)
+
+        使用图像来替换列表项的标记
+         list-style-image：url("")
+
+        指示如何相对于对象的内容绘制列表项标记
+         list-style-position：inside(放置文本以内，且环绕文本根据标记对齐)|outside(默认值，位于文本左侧，放置在文本以外，且环绕文本不根据标记对齐)
+
+        简写：list-style：XXX XXX;
+    -->
+
+    <!-- 表格属性
+        边框
+         border
+
+        背景颜色
+         background-color
+    
+        背景图片
+         background-image：url("")
+
+        设置内容距边框的距离
+         padding
+
+        内容水平对齐方式
+         text-align：left|center|right
+
+        内容垂直对齐方式(写在tr或者td上)
+         vertical-align：top|middle|bottom
+
+        元素的大小
+         width、height
+
+        边框折叠(相当于cellspacing="0")
+         border-collapse：collapse
+    -->
+
+    <!-- 内容溢出
+        overflow：
+         取值：visible(默认值，当内容大于父元素直接溢出可见)|hidden(溢出部分隐藏)|auto(当内容溢出显示滚动条，不溢出则不显示)|scroll(不管是否溢出都显示滚动条)|inherit(继承父元素overflow的值)
+    -->
+
+    <!-- 内容一行显示溢出省略号显示
+        white-space:nowrap(文本不换行)
+        overflow:hidden(溢出部分隐藏)
+        text-overflow:ellipsis(溢出部分省略号)
+     三个缺一不可，顺序可调
+    -->
+
+    <!-- 选择器
+        基础选择器
+            全局选择器
+             *{}
+
+            元素选择器
+             p{}
+
+            类选择器
+             .X{}
+
+            ID选择器
+             #X{}
+
+        合并选择器
+         用,隔开
+        
+        交集选择器
+         挨着
+
+        关系选择器
+            后代选择器(选中所有的后代)
+             用空格隔开
+             选择器1 选择器2{}
+
+            子代选择器(选中所有直接子代)
+             用大于号隔开
+             选择器1>选择器2{}
+
+            相邻兄弟选择器(平级 爱着后面的一个兄弟)
+             用加号隔开
+             选择器1+选择器2{}
+             
+            通用兄弟选择器(平级 后面的所有兄弟)
+             用破浪号隔开
+             选择器1~选择器2{}
+        -->
+
+    <!-- 一些其他属性
+        字符之间的空白(字符间距)增加或者减少
+         letter-spacing：normal(默认无额外空间)|length(定义字符间的固定空间允许使用负值)
+         例如：h1{letter-spacing：2px}
+        
+        设置行高
+         line-height：normal(默认)|number(设置数字，此数字与当前字体尺寸相乘设置行间距)|length(设置固定的行间距)
+         ***当行高等于高时一行文字垂直居中
+         vertical-align：middle主要配和tr、td使用，一般不使用生效
+
+        元素透明度
+         rgba：设置颜色的透明度
+         opacity：0-1；0表示完全透明，1表示不透明。
+
+        指定元素内的空白怎么处理
+         white-space：normal(默认)|pre(空白会保留)|nowrap(文本不会换行，会在同一行继续，直到遇见br标签为止)
+    -->
+
+    <!-- 伪类选择器
+        同一个标签，根据其不同的状态，有不同的样式，这就是伪类，用冒号来表示
+        1.：link 链接：超链接点击之前(只适用于a)
+        2.：visited 访问过的：链接被访问过之后(只适用于a)    
+        3.：hover 悬停：鼠标放在标签上的时候(适用于所有标签)   
+        4.：active 激活：鼠标点击标签，但是不松手时(适用于所有标签)   
+        
+        同一个元素要同时4个状态生效必须按照这个顺序写
+         先爱后恨顺序：L-V-H-A
+        
+        C3新增的伪类选择器
+        1.：first-child 匹配其父元素中第一个子元素
+        2.：last-child 匹配其父元素中最后一个子元素
+        3.：nth-child(n) 匹配其父元素中第n个子元素，元素类型没有限制
+                        n可以是一个数字，一个关键字，或者一个公式
+        4.：only-child 匹配没有兄弟元素的元素
+        5.：first-of-type 匹配兄弟元素中第一个某种类型的元素
+        6.:last-of-type 匹配兄弟元素中最后一个某种类型的元素
+        7.：nth-of-type(an-plus-b|even|odd) 匹配相同类型的兄弟元素中位置的元素
+        8.：nth-last-child(n) 与：nth-child一致，它是从结尾开始计数
+        9.：nth-last-of-type(n) 与：nth-of-type一致，从结尾开始计数
+        10.：empty 匹配不包含任何子元素的元素
+        11.：not() 匹配不符合一组选择器的元素
+        12.：focus 获得焦点的元素
+        13.：checked 表示任何处于选中状态的input type=radio、checkbox 或select元素中的option元素
+             去掉input和button点击时外面蓝色的边框：outline：none
+        14.：：selection 伪元素应用于文档中被用户高亮的部分
+    -->
+
+    <!-- 伪对象选择器
+        ::before 出现在原有元素的实际内容之后的一个可样式化元素
+            ::before{content:""}
+        ::after 出现在原有元素的实际内容之前的一个可样式化元素
+            ::after{content:""}
+        ::first-letter 元素的第一个字母
+        ::first-line 包含此伪元素的元素的第一行
+    -->
+
+    <!-- 属性选择器
+         利用HTML的属性[属性]
+         例如：[class]{}|[class=box]{}|div[class=box]{}
+         例2：[class^=t]{}(class中以t开头的元素)|[class$=e]{}(class中以e结尾的元素)|[class*=o]{}(class中含有o的元素)
+    
+    
+    -->
+
+    <!-- 盒子模型
+        html中所有元素都可以看成一个盒子,称为盒子模型
+         组成部分:content+padding+border+margin
+
+         实际大小：width+padding+border+margin height+padding+border+margin
+
+         content 内容区域
+         width|height|min-width|max-width|min-height|max-height
+
+         块级元素默认宽度为100%,行内元素默认宽度默认宽度由内容撑开
+         如果不设置快宽高,块级元素和行内元素的高度默认都由内容撑开
+         块级元素可以设置宽高,行内元素设置宽高不生效,%百分比相对于父元素
+
+         border 边框
+         border-style(必须属性):solid(实)|dashed(虚)|dotted(点)|double(双)|none(无)
+         边框的样式 默认3px 黑色
+         border-color border-width
+
+         简写:border:width style color
+         border-top:width style color border-bottom border-left border-right
+
+         padding 内边距 不能取负值和auto 设置内容距边框的距离
+         padding:value 四周;
+         padding:value value 上下 左右
+         padding:value value value 上 左右 下
+         padding:value value value value 上 右 下 左 (顺时针)
+         padding-top padding-bottom padding-left padding-right
+         注意:padding会撑开容器
+    
+         margin 外边距 设置元素之间的距离 外边距是透明的
+         可以取正负和auto
+         margin:value 四周;
+         margin:value value 上下 左右
+         margin:value value value 上 左右 下
+         margin:value value value value 上 右 下 左 (顺时针)
+         margin-top margin-bottom margin-left margin-right
+         应用:
+         1.块级元素水平居中
+         margin:0 auto   原理:(父元素宽度-子元素宽度)/2
+         margin的注意事项：垂直方向上外边距合并问题，当垂直方向上外边距相撞时，取较大值，浮动元素上下不合并。
+                          margin-top问题：当给第一个子元素设置margin-top时，父元素会跟着一起下来。
+                          解决：给父元素加overflow：hidden；加了以后元素开启了BFC(block formatting context)格式，这个元素不会受子元素的影响。
+                               父元素或者子元素浮动，加浮动后元素开启BFC格式。
+                               父元素加border：1px solid transparent
+                               父元素加padding-top：1px
+    -->
+
+    <!-- 怪异盒模型 IE8及以下
+        组成部分：content+padding+border+margin
+        实际大小：width+margin height+margin width、height包含了padding和border 
+        盒模型相互转换：box--sizing：content-box(默认值，标准盒模型)|border-box(怪异盒模型)
+    -->
+
+    <!-- 浮动
+        原理：元素浮动后排除到普通文档流之外     
+             元素浮动后在页面中不占据位置(原位置不保留)
+             浮动元素碰到父元素的边框或者浮动元素的边框就会停止
+             浮动不会层叠
+             浮动只有左右浮动，没有上下浮动
+             浮动后所有元素转换为块级元素
+             元素浮动后，后面的文字不会被覆盖，因为一开始是用来图片环绕的。
+
+        语法：float：left|right|none(默认)
+
+        清除浮动的影响：子元素浮动后，在页面中不占据位置，如果父元素没有设置高度，那么父元素的高度会坍塌，会对后面的元素产生影响。
+        清除浮动的方法：给浮动元素的父元素设置高度(高度已知状态下)
+                      给浮动元素的父元素加overflow：hidden|auto(自动找高) (但是当子元素宽度大于父元素时，hidden会直接隐藏，auto会出现横向滚动条)
+                      给受影响的元素加clear：left|right|both (但是浮动元素的父元素还是高度坍塌状态，不适用于有背景时清除浮动)
+                      给浮动元素后加一个空的div：空div{clear：both} (会显示父元素的高度，但是页面中会增加很多空div元素，影响浏览器解析速度)
+                      伪元素(伪对象)法：浮动元素的父元素::after{content:"";display:block;clear:both;} 原理同4
+    -->
+
+    <!-- 定位
+        position作用：设置元素定位
+        属性值：static默认值(没有定位，静态定位)|relative(相对定位)|absolute(绝对定位)|fixed(固定定位)
+
+            relative：相对于自己原位置定位，定位后原位置保留 配合left、top、right、bottom移动(当四个属性同时存在，left、top优先级高于right和bottom)
+                      取正值，元素往右下走；取负值，元素往右上走
+                      应用场景：自己小范围移动；配合绝对定位使用。
+
+            absolute：相对于已经定位(relative、absolute、fixed)的父元素定位，如果没有定位，逐级往上找，最后相对于body定位
+                      定位后原位置不保留，配合left、top、right、bottom移动(当四个属性同时存在，left、top优先级高于right和bottom)
+                      应用场景：形成独立的一层
+                      建议：给父元素加一个相对定位
+
+            fixed：相对于浏览器窗口定位，定位后原位置不保留，配合left、top、right、bottom移动(当四个属性同时存在，left、top优先级高于right和bottom)
+                      应用场景：固定在页面某个位置                           
+        -->
+
+    <!-- z-index
+        z-index属性设置元素的堆叠顺序，拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面
+        值：auto(默认，堆叠顺序与父元素相等)
+        注释：元素可拥有负的z-index属性值；仅能在定位元素上生效。同时定位后，后面的元素会在前面的元素上面。
+        该属性设置一个定位元素沿z轴的位置，z轴定义为垂直延伸到显示区的轴。如果为正数，则离用户更近，为负数则离用户更远。
+        -->
+
+    <!-- display
+        display属性规定元素应该生成的框的类型
+        这个属性用于定义建立布局时元素生成的显示框类型，对于HTML等文档类型，如果使用display不谨慎会很危险，因为可能违反HTML中已经定义的显示层次结构
+        取值：none(此元素不会被显示，隐藏后原位置不保留)|block(此元素将显示为块级元素，此元素前后会带有换行符)|inline(默认，此元素会被显示为内联元素，元素前后没有换行符)|inline-block(行内块级元素)|table-cell(此元素会作为一个表格单元格显示，类似td和th)|flex(弹性盒模型)|table
+        注意：行内块级元素会识别代码之间的空白，(一行内横向显示但是可以设置宽高，行内元素不可设置宽高，由内容撑开)常见的元素有：img、input、button等
+            设置属性后原位置不保留：float|position：absolute|position：fixed|display：none
+            设置这四个属性后，块级元素默认宽度由内容撑开
+            隐藏的区别：display：none  隐藏自己，隐藏后原位置不保留
+                       visibility：hidden  隐藏自己，隐藏后原位置保留
+                       opacity：0  元素的透明度为0，隐藏后原位置保留
+                       overflow：hidden  溢出部分隐藏
+    -->     
+
+    <!-- 圆角
+        border-radius
+        取值：px|% 可以取一个值，两个值，三个值，四个值
+        当一个值时，设置4个角
+        当两个值时，分别设置左上，右下|左下，右上
+        当三个值时，分别设置左上|左下，右上|右下
+        当四个值时，分别设置左上|右上|右下|左下
+        当使用百分比时，50%为一个圆
+        写圆角的时候推荐使用px，因为使用百分比时，会以单边分别计算弧度，例如500*300的长方形，5%的圆角，上下边圆角为500*5%=25px，左右边圆角为300*5%=15px。
+    -->
+
+    <!-- 盒阴影
+        box-shadow 向框添加一个或多个阴影
+        语法：box-shadow：h-shadow v-shadow blur spread color inset；
+        值：h-shadow 必须 水平阴影位置，允许负值
+           v-shadow必须 垂直阴影位置，允许负值
+           blur 可选 模糊距离 只能取正值，取值越大模糊越厉害(px)
+           spread 可选 阴影的尺寸 可取正负值，正值变大，负值变小
+           color 可选 阴影的颜色
+           inset 可选 将外部阴影(outset)改为内部阴影 outset(默认)|inset内部阴影
+    -->
+
+    <!-- 字阴影
+        text-shadow 向文本设置阴影 
+        语法:text-shadow:h-shadow v-shadow blur color
+        值:h-shadow 必须 水平阴影的位置,允许负值
+          v-shadow 必须 垂直阴影的位置,允许负值
+          blur 可选 模糊度
+          color 可选 阴影的颜色
+    -->
+
+    <!-- 背景渐变
+        1.线性渐变
+            background:linear-gradient(方向,颜色1,颜色2...)
+            
+            参数说明:
+                方向:可以省略,默认从上往下
+                取值:to 方向,例如to right,to right top
+                    角度 单位deg 当取值为角度时,不用写to,直接写角度
+                    从下往上为0deg 从左下往右上为45deg 从左往右为90deg 从上往下为180deg 从右往左为-90deg
+        2.径向渐变
+            background:radial-gradient(渐变的中心点,渐变的形状,颜色1,颜色2...);(css3新特性,有些浏览器不兼容,可在代码前加-webkit-如:background:-webkit-radial-gradient())
+
+            参数说明:
+                渐变的中心点:默认在元素的正中心 例如 left|left top
+                渐变的形状:默认为椭圆,可以取值circle 正圆
+    -->
+
+    <!-- 转换 变形
+        作用：使元素在位置或者形状上发生一定的改变
+        属性：transform：translate()位移 rotate()旋转 scale()缩放 skew()倾斜;
+            位移：单位px|%
+                transform：translate(x,y);当取一个值，水平方向；当取两个值，表示水平和垂直方向；取正值往右下走，取负值往左上走。
+            
+        旋转 单位deg(弧度)
+            transform：rotate();
+            2D旋转只取一个值，当取正值时，顺时针旋转；当取负值时，逆时针旋转
+            沿元素中心点旋转，元素默认的中心点为宽高的一半
+            可以使用transform-origin：right bottom;来修改元素的中心点
+            注意：旋转时，会旋转元素的坐标轴，当位移和旋转同时存在，建议位移写在旋转的前面
+
+        缩放 取值number
+            transform：scale(x,y)
+            取值0-1：缩小，取值大于1：放大,默认值为1
+            transform：scaleX();transform：scaleY()
+
+        倾斜 单位deg
+            transform：skew(xdeg,ydeg)
+            当取一个值，水平方向；当取两个值，表示水平和垂直方向
+            transform:skewX();transform:skewY()
+    
+    -->
+
+    <!-- 过渡
+        作用：元素从一种样式逐渐改变为另一种的效果
+        过渡必须有触发事件，如鼠标悬停、鼠标点击等
+
+        属性：过渡的属性transition-property:background-color 多个属性之间用逗号隔开，简写为all 必须
+
+             过渡的持续时间(默认0s|0ms)transition-duration：1s 必须
+
+            过渡的速度变化类型transition-timing-function 可选
+            ease(默认，先加速后减速)|ease-in 加速|ease-out 减速|ease-in-out 先加速后减速|linear 匀速
+
+            过渡的延迟时间transition-delay 可选
+            默认0s|0ms 可以取负值，当取负值时表示把这段时间的效果跳过
+
+            简写为transition：property duration timing-function delay；
+            
+            可以过渡的属性：取值为颜色|取值为数值|阴影box-shadow text-shadow|转换transform|背景渐变
+    -->
+
+    <!-- 字体图标
+        iconfont
+        步骤：1、打开官网iconfont.cn
+             2、点击图标库
+             3、搜索图标
+             4、添加购物车(所有一次性添加)
+             5、下载代码
+             6、解压到需要的文件夹中
+             7、html中引入iconfont.css
+             8、html中标签class="iconfont"
+             9、双标签之间复制图标的unicode
+             10、用字体的属性去修改样式
+    -->
+
+    <!-- 厂商前缀
+        解决浏览器对CSS3新特性的支持
+        浏览器:谷歌   厂商前缀:-webkit-   内核:blink
+        浏览器:苹果   厂商前缀:-webkit-   内核:webkit
+        浏览器:欧朋   厂商前缀:-o-        内核:blink
+        浏览器:火狐   厂商前缀:-moz-      内核:gecko
+        浏览器:IE     厂商前缀:-ms-       内核:trident
+    -->
+
+    <!-- cssHack
+        解决IE低版本浏览器的兼容问题
+        语法:《!--[if 条件]><![endif]--》
+
+        条件：IE 版本号(注意中间的空格)
+             IE gt 版本号 (gt:大于)
+             IE gte 版本号 (gte:大于等于)
+             IE lt 版本号 (gt:小于)
+             IE lte 版本号 (gt:小于等于)
+
+        属性前缀和后缀
+            前缀写在属性的前面：+ - * _ #
+            后缀写在属性的后面：\0 \9 \\9\0 !important(优先级最高)
+    -->
+
+    <!-- 动画@keyframes
+        动画是使元素从一种样式逐渐变化为另一种样式的效果
+        可以改变任意多样式任意多次数
+        使用百分比来规定发生变化的时间，或使用关键词"from"和"to"，等同于0%和100%
+        0%是动画的开始，100%是动画的完成
+
+        动画与过渡的区别
+            过渡只能制作简单的动画，动画可以制作复杂的动画
+            过渡必须有出发条件，动画可以没有
+            动画可以控制次数
+    
+        定义动画(建议加厂商前缀)
+            @keyframes name (@-webkit-keyframes name{}){
+                0%(from){}
+                percent
+                100%(to){}
+            }
+
+        调用动画(加厂商前缀)
+            -webkit-animation：name(必须) duration持续时间(s|ms)(必须) 动画速度变化类型(同过渡的取值 可选) 延迟时间(可选)(s|ms) 动画的播放次数(可选)(number|infinite) 动画播放方向(alternate偶数次倒着播放) 动画停到最后一帧(可选)(forwards)；
+            
+        设置动画的播放状态
+            animation-play-state:running默认|paused
+    -->
+
+    <!-- 媒体查询 media quary  v3.bootcss.com
+        作用：实现响应式布局，写一次样式，兼容所有终端
+
+        优缺点：优点，灵活兼容所有设备  缺点，代码冗余
+
+        语法：1、内部引入，所有终端的样式写在同一个css文件中
+                移动端：@media screen and (max-width:768px){}
+                pad端：@media screen and (min-width:768) and (max-width:992px){}
+                PC端：@media screen and (min-width:992){}
+
+             2、外部引入，不同设置的css写在各自各自的css文件中
+                移动端：<link rel="stylesheet" href="" media="sceen and (max-width:768px)">
+                pad端：<link rel="stylesheet" href="" media="sceen and (min-width:768px) and (max-width:992px)">
+                PC端：<link rel="stylesheet" href="" media="sceen and (min-width:992px)">
+    -->
+
+    <!-- 弹性盒模型
+        盒模型：html元素可以看成是一个盒子，称为盒模型
+        1、标准盒模型 w3c盒模型 浏览器默认的盒模型
+        组成部分：content+padding+border+margin
+        实际大小：width+padding+border+margin
+
+        2、怪异盒模型 IE盒模型 box-sizing：border-box;
+        组成部分：content+padding+border+margin
+         实际大小：width+margin
+    
+        3、弹性盒模型 伸缩盒模型 flex box
+        作用：多用于移动端布局
+        在弹性盒中float、clear、vertical不生效
+        是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有恰当的行为的布局方式
+        引入弹性盒布局模型的目的时提供一种更加有效的方式来对一个容器中的子元素进行排列、对齐和分配空白空间。
+        弹性盒子由弹性容器(flex container)和弹性子元素(flex item)组成
+        弹性容器通过设置display属性的值为flex将其定义为弹性容器
+        弹性容器内包含了一个或多个弹性子元素
+
+        父元素上的属性
+        1、开启弹性盒模型：display:flex；
+        2、父元素开启弹性盒模型，子元素水平排列
+        3、设置弹性盒的方向：flex-direction：row(默认，水平)|column(垂直)|row-reverse|column-reverse
+
+        设置子元素在主轴的对齐方式
+        默认x轴为主轴，y轴为侧轴；当子元素垂直排列时，y轴为主轴，x轴为侧轴
+        justify-content:flex-start(默认)|flex-end|center|space-between(在子元素之间平均分配父元素剩余的距离)|space-around(在子元素四周分配父元素剩余的距离，两端为中间的一半);
+
+        设置子元素在侧轴的对齐方式
+        align-items：flex-start(默认)|flex-end|center
+
+        子元素上的属性
+        父元素开启弹性盒模型后，子元素默认的宽度由内容撑开
+
+        flex-grow：number；
+        子元素分配父元素剩余距离的比例
+    -->
+    
+    <!-- 居中问题
+        1、元素内容水平居中
+            text-align：center；
+        2、块级元素水平居中
+            margin：0 auto；
+        3、一行文字垂直居中
+            行高等于高 line-height：height；
+        4、多行内容垂直居中
+            margin：height 0；写在子元素上
+            padding：height 0；写在父元素上
+            改成怪异盒模型
+        5、子元素在父元素中水平垂直居中
+            1、子元素宽高已知
+            margin：number；可以算出来
+            给父元素加overflow：hidden；
+             
+            padding同margin，最后将父元素转换成border-box
+
+            绝对定位法：top：50%
+                       left：50%
+                       margin-left：子元素宽负一半px
+                       margin-top：子元素高负一半px
+
+            弹性盒：justify-content：center
+                    align-items：center
+
+            表格法：display：table-cell
+                    text-align：center
+                    vertical-align：middle
+                    将子元素display：inline-block
+    
+            transform：translate
+
+            2、子元素宽高未知
+            弹性盒法：justify-content：center
+                     align-items：center
+
+            绝对定位配合transform：子元素：top：50% 
+                                         left：50%  左上角走到父元素中心点
+                                         transform：translate(-50%,-50%) 将子元素向左移动一半使中心点对齐
+    -->
+
+    <!-- 多列
+        将一行文字竖列排版
+        
+        column-count：number；将一段文字分为几列
+        column-gap：number px；每列中间的空隙大小
+        column-rule：numbner solid color；类似于border，列中间的边框
+    -->
+
+        <!-- 雪碧图 css精灵 css sprite
+        定义：雪碧图是一项图片整合技术，把许多小图整合到一张大图上面
+
+        优点：减少图片的字节
+              减少网页的http请求，从而大大的提高页面的性能
+              解决了网页设计师在图片命名上的困扰，提高网页制作效率
+        
+        缺点：引入进网页调节距离比较麻烦
+
+        原理：需要一个设置号宽和高的容器
+              通过background-image：url("");引入背景图片
+              通过background-position调节移动到自己需要的位置
+        -->
+
+        <!--实体字符
+            当html不能识别一些特殊字符，可以用实体字符来替代
+            空格：&nbsp;
+            <：&lt;
+            >：&gt;
+            注意最后的分号也要带上
+        -->
+
+    <div>
+        <div id="b4"></div>
+        <div id="b5"></div>
+        <div id="b6"></div>
+        <div id="b7"></div>
+        <div id="b8"></div>
+    </div>
+    <div id="f1">
+        <div id="b9"></div>
+        <div id="b10"></div>
+    </div>
+    <div>
+        <div id="b11"></div>
+    </div>
+    <div id="b12">
+        <div id="b13"></div>
+        <div id="b14"></div>
+        <div id="b15"></div>
+    </div>
+    </div>
+</body>
+
+</html>
