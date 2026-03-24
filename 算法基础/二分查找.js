@@ -36,7 +36,7 @@ const supFunc = {
         "Invalid second param value.Please enter the correct value. 1 represents forward direction, while -1 represents reverse direction",
       );
     }
-    // 次时双参状态必正确
+    // 此时双参状态必正确
     if (towards > 0) {
       arr.sort((a, b) => a - b);
     } else {
