@@ -1,0 +1,33 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Check files
+        run: |
+          echo "Checking files..."
+          ls -la
+          
+      - name: Validate HTML files
+        run: |
+          echo "Validating HTML files..."
+          find . -name "*.html" -type f | head -10
+          # 安装HTML验证工具并验证
+          sudo apt-get update && sudo apt-get install -y tidy
+          find . -name "*.html" -type f | head -5 | xargs -I {} tidy -q -e {}
+          
+      - name: Validate JavaScript files
+        run: |
+          echo "Validating JavaScript files..."
+          find . -name "*.js" -type f | head -10
+          # 安装Node.js并验证JavaScript语法
+          curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+          sudo apt-get install -y nodejs
+          find . -name "*.js" -type f | head -5 | xargs -I {} node -c {}
