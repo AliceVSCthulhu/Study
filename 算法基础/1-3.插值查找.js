@@ -1,4 +1,4 @@
-import supFunc from "./supFunc";
+import supFunc from "./supFunc.js";
 const { isNormalArray } = supFunc;
 
 //插值查找数据集必须要是等差数列，这样计算的比例才有意义。若是非等差，则插值的效率不如预期。

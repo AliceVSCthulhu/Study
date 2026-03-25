@@ -1,4 +1,4 @@
-import supFunc from "./supFunc";
+import supFunc from "./supFunc.js";
 const { isNormalArray, mySort } = supFunc;
 function search(arr, target) {
   if (!isNormalArray(arr)) {
