@@ -1,4 +1,4 @@
-import supFunc from "./supFunc";
+import supFunc from "./supFunc.js";
 const { isNormalArray, mySort } = supFunc;
 //二分法使用生成器实现
 function* BinarySearch(arr, target) {

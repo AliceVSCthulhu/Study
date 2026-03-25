@@ -1,4 +1,4 @@
-import supFunc from "./supFunc";
+import supFunc from "./supFunc.js";
 const { isNormalArray } = supFunc;
 /**
  * 冒泡排序
