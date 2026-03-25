@@ -1,3 +1,5 @@
+import supFunc from "./supFunc";
+const { isNormalArray } = supFunc;
 /**
  * 冒泡排序
  * @param {*} arr
@@ -5,6 +7,11 @@
  * @return new ordered arr
  */
 function bubbleSort(arr, forward = 1) {
+  if (!isNormalArray(arr)) {
+    throw new TypeError(
+      "The parameters must be a non-empty array consisting entirely of numbers",
+    );
+  }
   const directions = [-1, 1];
   if (!directions.includes(forward)) {
     throw new RangeError("forward must be 1 or -1");

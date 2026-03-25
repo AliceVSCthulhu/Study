@@ -1,6 +1,13 @@
-//插值查找数据集必须要是等差数列，这样计算的比例才有意义。若是非等差，则插值的效率不如预期。
+import supFunc from "./supFunc";
+const { isNormalArray } = supFunc;
 
+//插值查找数据集必须要是等差数列，这样计算的比例才有意义。若是非等差，则插值的效率不如预期。
 function isEqualDiffArr(arr) {
+  if (!isNormalArray(arr)) {
+    throw new TypeError(
+      "The parameters must be a non-empty array consisting entirely of numbers",
+    );
+  }
   //长度为1，默认不可插值，故返回false
   if (arr.length < 2) {
     return false;
@@ -23,6 +30,11 @@ function isEqualDiffArr(arr) {
 }
 
 function insertSearch(arr, target) {
+  if (!isNormalArray(arr)) {
+    throw new TypeError(
+      "The parameters must be a non-empty array consisting entirely of numbers",
+    );
+  }
   //数组不为等差数列
   if (!isEqualDiffArr(arr)) {
     return -1;
