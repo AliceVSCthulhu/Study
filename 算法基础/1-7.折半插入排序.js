@@ -13,7 +13,7 @@ function binaryInsertionSort(arr, forward = 1) {
   }
   //双参无误
   for (let i = 1; i < arr.length; i++) {
-    let curNum = arr[i];
+    const curNum = arr[i];
     //init
     let left = 0,
       right = i - 1,
