@@ -2,6 +2,8 @@ import supFunc from "./supFunc.js";
 const { isNormalArray } = supFunc;
 
 //插值查找数据集必须要是等差数列，这样计算的比例才有意义。若是非等差，则插值的效率不如预期。
+// 目标值长度 ： 总长度 = 目标index ： (右侧index - 左侧index)
+// ==>  目标index = 目标长度 * (右侧index - 左侧index) / 总长度
 function isEqualDiffArr(arr) {
   if (!isNormalArray(arr)) {
     throw new TypeError(
