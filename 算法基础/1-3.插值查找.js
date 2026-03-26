@@ -6,7 +6,7 @@ const { isNormalArray } = supFunc;
 // ==>  目标index = 目标长度 * (右侧index - 左侧index) / 总长度
 
 /**
- * 验证一个数组是否是等差，特殊：长度为1返回false
+ * 验证一个数组是否是等差，特殊：长度为1则返回false
  * @param {*} arr 
  * @returns {Boolean} Boolean
  */
