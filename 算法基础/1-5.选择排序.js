@@ -5,6 +5,7 @@ const { isNormalArray } = supFunc;
  *
  * @param {*} arr
  * @param {*} forward 升序：forward = 1；降序：forward= -1
+ * @returns 返回新排好序的数组
  */
 function selectionSort(arr, forward = 1) {
   if (!isNormalArray(arr)) {

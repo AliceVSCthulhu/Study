@@ -4,7 +4,7 @@ const { isNormalArray } = supFunc;
  * 冒泡排序
  * @param {*} arr
  * @param {*} forward 升序：forward = 1；降序：forward= -1
- * @return new ordered arr
+ * @returns new ordered arr
  */
 function bubbleSort(arr, forward = 1) {
   if (!isNormalArray(arr)) {
@@ -32,4 +32,4 @@ function bubbleSort(arr, forward = 1) {
     }
   }
   return arr;
-}
+}s
