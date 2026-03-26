@@ -6,7 +6,7 @@ const { isNormalArray } = supFunc;
 // ==>  目标index = 目标长度 * (右侧index - 左侧index) / 总长度
 
 /**
- * 验证一个数组是否是等差，特殊：长度为1则返回false
+ * 验证一个数组是否是等差，若长度为0即数组内无元素返回false
  * @param {*} arr 
  * @returns {Boolean} Boolean
  */
@@ -16,9 +16,13 @@ function isEqualDiffArr(arr) {
       "The parameters must be a non-empty array consisting entirely of numbers",
     );
   }
-  //长度为1，默认不可插值，故返回false
-  if (arr.length < 2) {
+  //长度为0，数组内无元素，故返回false
+  if (arr.length < 1) {
     return false;
+  }
+  //长度为1，数学上也称之为等差数列
+  if (arr.length === 1) {
+    return true;
   }
   //长度大于1
   let left = 0,
@@ -38,7 +42,7 @@ function isEqualDiffArr(arr) {
 }
 
 /**
- * 
+ *
  * @param {Array} arr 等差数列数组
  * @param {Number} target 目标值
  * @returns 若找到返回其下标，未找到返回-1
