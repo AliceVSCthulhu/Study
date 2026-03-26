@@ -18,7 +18,7 @@ function insertionSort(arr, forward = 1) {
       const shouldInsert =
         forward === 1 ? arr[j] < currentNum : arr[j] > currentNum;
       if (!shouldInsert) {
-        // 需要与左侧拍好的元素每个作比较
+        // 需要与左侧排好的元素每个作比较
         arr[j + 1] = arr[j];
         if (
           // 左侧比较到最后一个元素时
