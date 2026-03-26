@@ -32,4 +32,4 @@ function bubbleSort(arr, forward = 1) {
     }
   }
   return arr;
-}s
+}
